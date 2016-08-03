@@ -1,0 +1,20 @@
+{
+  "name": "d3_wordcloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "d3-dispatch": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0"
+  }
+}
