@@ -13,10 +13,25 @@
   </head>
   <body>
 
+
     <div ng-controller="MapController">
     <div id="map"></div>
-    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
-         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+
+      <div id="class" ng-repeat="marker in markers | orderBy: ['-date'] | limitTo: '100'" >
+
+
+        <a href="#" ng-click="openInfoWindow($event, marker)">
+          <img src="{{marker.icon}}" alt="" />
+           {{marker.title}} on {{marker.location}}</a> at {{marker.date | date: ' MM/dd/yyyy HH:mm'}}
+
+        <!-- marker.date = formatDate;
+        marker.location = info.hundred_block_location;
+        marker.code = info.event_clearance_code;
+        marker.type = info.event_clearance_group; -->
+
+
+
+
     </div>
 </div>
 
