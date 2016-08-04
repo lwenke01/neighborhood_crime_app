@@ -1,6 +1,6 @@
 {
   "name": "neighborhood_watch_app",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Neighborhood Crime App",
   "main": "app.js",
   "scripts": {
