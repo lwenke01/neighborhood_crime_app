@@ -1,5 +1,5 @@
 {
-  "name": "d3_wordcloud",
+  "name": "neighborhood_watch app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,8 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "d3-dispatch": "^1.0.1"
+    "d3-dispatch": "^1.0.1",
+    "express": "^4.14.0"
   },
   "devDependencies": {
     "browserify": "^13.1.0"
