@@ -1,1 +1,1 @@
-web: npm i && node server.js
+web: npm i && npm start
