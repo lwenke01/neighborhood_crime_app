@@ -2,38 +2,46 @@
 <html ng-app="VisualApp">
   <head>
     <meta charset="utf-8">
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk"></script>
-<!-- <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script> -->
-<link rel="stylesheet" type="text/css" href="assets/sass/base.css"/>
-    <script src="components/map/map_controller.js"></script>
-    <title>D3</title>
+
+<link rel="stylesheet" type="text/css" href="base.css"/>
+    <script src="app.js"></script>
+    <title>Madison Park Area Crime App</title>
   </head>
   <body>
+    <h1>Madison Park Area Crime Tracker</h1>
+    <p class="info">
+      This information is provided by the data.seattle.gov Seattle 911 'Accident Investigation' API (<a href="https://data.seattle.gov/Public-Safety/Seattle-911-Accident-Investigation-/8rnc-58qi">here</a>). Information is updated throughout the day.
+      If you have any questions, feel free to email me @<a href="mailto:info@lisawenke.com">info@lisawenke.com</a>
+    </p>
+    <div class="crime" ng-controller="MapController">
 
+      <p class="date">  {{count}} records for dates: {{oldD | date: ' MM/dd/yyyy'}} to  {{currD| date: ' MM/dd/yyyy'}}
+        </p>
 
-    <div ng-controller="MapController">
-    <div id="map"></div>
-
-      <div id="class" ng-repeat="marker in markers | orderBy: ['-date'] | limitTo: '100'" >
-
-
+<div id="map"></div>
+    <div class="container">
+      <div id="class" ng-repeat="marker in markers | orderBy: ['-date']" >
         <a href="#" ng-click="openInfoWindow($event, marker)">
-          <img src="{{marker.icon}}" alt="" />
-           {{marker.title}} on {{marker.location}}</a> at {{marker.date | date: ' MM/dd/yyyy HH:mm'}}
 
-        <!-- marker.date = formatDate;
-        marker.location = info.hundred_block_location;
-        marker.code = info.event_clearance_code;
-        marker.type = info.event_clearance_group; -->
+           <label>{{marker.title}}</a> <img src="{{marker.icon}}" alt="" /><br>at {{marker.date | date: ' MM/dd/yyyy HH:mm'}} <br> on {{marker.location}} <br>
 
-
-
-
-    </div>
+         </label>
+         </div>
+  </div>
 </div>
+<div class="ref">
+  <h3>Resources</h3>
+  <ul>
+    <li>Seattle Police non emergency phone number: <strong>(206) 625-5011</strong></li>
+    <li>Seattle Police Dept Contact Info: <strong> <a href="http://www.seattle.gov/police/contact/">Site</a></strong></li>
+    <li>911 Call Data: <strong><a href="https://data.seattle.gov/Public-Safety/Seattle-911-Accident-Investigation-/8rnc-58qi">Site</a></strong></li>
+    <li>Police Codes: <strong><a href="http://www.interceptradio.com/wiki/index.php/Seattle_Police_Department_Codes">Site</a></strong></li>
+  </ul>
 
+</div>
+<footer>&copy 2016 Lisa Wenke      <strong>Madison Park Crime Tracker</strong>    <a href="mailto:info@lisawenke.com">info@lisawenke.com</a></footer>
   </body>
 </html>
