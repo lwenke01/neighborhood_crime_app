@@ -1,21 +1,21 @@
 {
-  "name": "neighborhood_watch app",
-  "version": "2.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "neighborhood_watch_app",
+  "version": "2.1.0",
+  "description": "Neighborhood Crime App",
+  "main": "app.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "engines": {
+    "node": "5.10.1"
+  },
+  "author": "Lisa Wenke",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
-    "d3-dispatch": "^1.0.1",
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "browserify": "^13.1.0"
+
   }
 }
