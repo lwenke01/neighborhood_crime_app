@@ -1,6 +1,6 @@
 {
   "name": "neighborhood_watch_app",
-  "version": "2.2.0",
+  "version": "2.5.0",
   "description": "Neighborhood Crime App",
   "main": "app.js",
   "scripts": {
@@ -9,6 +9,10 @@
   },
   "engines": {
     "node": "5.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lwenke01/neighborhood_crime_app"
   },
   "author": "Lisa Wenke",
   "license": "ISC",
