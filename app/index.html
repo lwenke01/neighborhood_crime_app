@@ -2,19 +2,20 @@
 <html ng-app="VisualApp">
   <head>
     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk"></script>
 
-<link rel="stylesheet" type="text/css" href="base.css"/>
-    <script src="app.js"></script>
+<script src="./bundle.js"></script>
     <title>Madison Park Area Crime App</title>
   </head>
   <body>
     <h1>Madison Park Area Crime Tracker</h1>
-    <p class="info">
+    <!-- <p class="info">
       This information is provided by the data.seattle.gov Seattle 911 'Accident Investigation' API (<a href="https://data.seattle.gov/Public-Safety/Seattle-911-Accident-Investigation-/8rnc-58qi">here</a>). Information is updated throughout the day.
-      </p>
+      </p> -->
     <div class="crime" ng-controller="MapController">
 
       <p class="date">  {{count}} records for dates: {{oldD | date: ' MM/dd/yyyy'}} to  {{currD| date: ' MM/dd/yyyy'}}
@@ -25,7 +26,7 @@
       <div id="class" ng-repeat="marker in markers | orderBy: ['-date']" >
         <a href="#" ng-click="openInfoWindow($event, marker)">
 
-           <label>{{marker.title}}</a> <img src="{{marker.icon}}" alt="" /><br>at {{marker.date | date: ' MM/dd/yyyy HH:mm'}} <br> on {{marker.location}} <br>
+           <label>{{marker.title}}</a> <img src="{{marker.icon}}" alt="" /><br>  at {{marker.date | date: ' MM/dd/yyyy HH:mm'}} <br> on {{marker.location}} <br>
 
          </label>
          </div>

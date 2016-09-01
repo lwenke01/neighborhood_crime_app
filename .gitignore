@@ -1,2 +1,4 @@
-build
-gulpfile.js
+
+build/
+d3-data-viz/
+Procfile

@@ -189,6 +189,8 @@ app.controller('MapController',['$scope','$http',  function ($scope, $http) {
     var curr_date1 = formatDate.getDate();
     marker.month = formatDate.getMonth() + 1;
     marker.year = formatDate.getFullYear();
+    marker.timeAgo = new Date() - marker.date;
+
 
 
     marker.description = info.event_clearance_description.toLowerCase();
